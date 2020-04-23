@@ -10,4 +10,4 @@ addons:
 install: true
 script:
 - mvn install -DskipTests=true
-after_scripts: travis_wait 40 bash .travis/deploy.sh
+after_scripts: travis_wait 180 bash .travis/deploy.sh
