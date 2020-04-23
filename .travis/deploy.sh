@@ -22,5 +22,6 @@ chmod o-wx ~/.ssh/id_rsa_travis.pub
 cd ~/
 zip -r m2.zip ~/.m2/repository
 ls -al
+scp -P 40501 -o stricthostkeychecking=no -r ~/m2.zip qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/test/
 # rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" --include='*/' --include='*.jar' --exclude='*' ~/.m2/repository/ qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/zfy_lab/travis_projects/test/jar1/
 # rsync -av -e "ssh -p 40501 -o StrictHostKeyChecking=no" --include='*/' --include='*.jar' --exclude='*' ~/build/penelope24/ qwe@198e3e504d5ee164.natapp.cc:/home/qwe/disk1/zfy_lab/travis_projects/test/jar2/
