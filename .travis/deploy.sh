@@ -13,4 +13,6 @@ dirs=(/home/travis/build/fy-travis-projects/*)
 name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
 echo $name
 
-
+cd $HOME/build/fy-travis-projects/$name
+pwd
+ls -al
