@@ -8,13 +8,14 @@ chmod o-wx ~/.ssh/
 chmod g-w ~/.ssh/config
 chmod o-wx ~/.ssh/config
 
+
+# get current project name
+dirs=(/home/travis/build/fy-travis-projects/*)
+name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
+echo $name
 cd $HOME/build/fy-travis-projects/$name
 ls -al
 
-# # get current project name
-# dirs=(/home/travis/build/fy-travis-projects/*)
-# name="$(cut -d'/' -f6 <<<"${dirs[0]}")"
-# echo $name
 
 # # collect 3rd party jars into one folder
 # cd $HOME 
